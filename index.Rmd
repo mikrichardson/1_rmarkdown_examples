@@ -1,7 +1,7 @@
 ---
 title: "Discharge Data Example"
-author: "Matthew Ross"
-date: "1/24/2022"
+author: "Mikaela Richardson"
+date: "`r format(Sys.time(), '%a %d %b')`"
 output:
   html_document:
     toc: true
@@ -17,10 +17,12 @@ library(dygraphs)
 library(xts)
 ```
 
+[Presentation access](file:///C:/Users/mikae/Documents/CSU/Spring_2022/Data_Science/Assignment1/1_rmarkdown_examples/index_talk.html#/)
 
-# Methods
+# Site Description
+The Cache la Poudre River, commonly referred to as the Poudre River, makes up 126 miles of Colorado's 107,000 miles of [rivers](https://www.uncovercolorado.com/rivers-in-colorado/). **The Poudre River is Colorado's only designated "Wild & Scenic" River.** The [Wild and Scenic Rivers Act](https://www.fs.usda.gov/managing-land/wild-scenic-rivers) is national legislation that protects over 13,400 miles of rivers and streams. The river originates in Rocky Mountain National Park, flowing east through Fort Collins and eventually converging with the South Platte River near [Greeley](https://www.visitftcollins.com/things-to-do/parks-open-spaces/cache-la-poudre-river/). The river corridor experiences *several diverse ecosystems* ranging from high alpine mountains to rolling plains. **The gauge site used for this analysis is located at the Lincoln Bridge in Fort Collins.**
 
-The Poudre River at Lincoln Bridge is:
+The Poudre River site at Lincoln Bridge is:
 
   - Downstream of only a little bit of urban stormwater
 
@@ -28,13 +30,11 @@ The Poudre River at Lincoln Bridge is:
   
   - Near an open space area and the Poudre River Trail
   
-  - **Downstream of many agricultral diversions**
-
-
-## SiteDescription
+  - **Downstream of many agricultural diversions**
 
 ![](https://waterdata.usgs.gov/nwisweb/local/state/co/text/pics/06752260big.jpg)
 
+# Methods
 
 ## Data Acquisition and Plotting tests
 
@@ -76,15 +76,16 @@ q_xts <- xts(q$q, order.by = q$Date)
 
 
 dygraph(q_xts) %>%
-  dyAxis("y", label = "Discharge (cfs)") 
+  dyOptions(drawPoints = TRUE, pointSize = 2) %>%
+  dyAxis("y", label = "Discharge (cfs)")
 ```
 
 
 
-# Assignment. 
+# Assignment 
 
 
-This assignment will be primarily about demonstrating some expertice in using
+This assignment will be primarily about demonstrating some expertise in using
 RMarkdown, since we will be using Rmds as the primary form of homework and 
 assignments. With that in mind, your assignment for this homework is to:
 
@@ -116,11 +117,6 @@ todays date, not just a static date you enter.
 
 
 
-
-## DyGraph example. 
-
-
-## Poudre Paragraph
 
 
 
