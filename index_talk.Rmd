@@ -2,10 +2,8 @@
 title: "Discharge Data Example"
 author: "Mikaela Richardson"
 date: "`r format(Sys.time(), '%a %d %b')`"
-output:
-  html_document:
-    toc: true
-    toc_float: true
+output: revealjs::revealjs_presentation
+ 
 ---
 
 ```{r setup, include=FALSE}
@@ -15,9 +13,9 @@ library(tidyverse)
 library(dataRetrieval)
 library(dygraphs)
 library(xts)
+library(revealjs)
 ```
 
-[Presentation access](./index_talk.html)
 
 # Site Description
 The Cache la Poudre River, commonly referred to as the Poudre River, makes up 126 miles of Colorado's 107,000 miles of [rivers](https://www.uncovercolorado.com/rivers-in-colorado/). **The Poudre River is Colorado's only designated "Wild & Scenic" River.** The [Wild and Scenic Rivers Act](https://www.fs.usda.gov/managing-land/wild-scenic-rivers) is national legislation that protects over 13,400 miles of rivers and streams. The river originates in Rocky Mountain National Park, flowing east through Fort Collins and eventually converging with the South Platte River near [Greeley](https://www.visitftcollins.com/things-to-do/parks-open-spaces/cache-la-poudre-river/). The river corridor experiences *several diverse ecosystems* ranging from high alpine mountains to rolling plains. **The gauge site used for this analysis is located at the Lincoln Bridge in Fort Collins.**
@@ -117,6 +115,11 @@ todays date, not just a static date you enter.
 
 
 
+
+## DyGraph example. 
+
+
+## Poudre Paragraph
 
 
 
